@@ -1,0 +1,16 @@
+server:
+    ingress:
+        enabled: true
+        hosts:
+            - argocd.lab.local
+        tls:
+            - secretName: argocd-tls
+              hosts:
+                  - argocd.lab.local
+        annotations:
+            cert-manager.io/cluster-issuer: selfsigned-issuer
+            kubernetes.io/ingress.class: traefik
+config:
+    rbac:
+        policy.csv: |
+            g, admin, role:admin
