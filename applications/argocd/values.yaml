@@ -3,10 +3,7 @@ server:
         enabled: true
         hosts:
             - argocd.lab.local
-        tls:
-            - secretName: argocd-tls
-              hosts:
-                  - argocd.lab.local
+        tlsSecretName: argocd-tls
         annotations:
             cert-manager.io/cluster-issuer: selfsigned-issuer
             kubernetes.io/ingress.class: traefik
