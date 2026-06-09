@@ -1,4 +1,5 @@
 server:
+    insecurity: true
     ingress:
         enabled: true
         hosts:
