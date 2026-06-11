@@ -1,7 +1,7 @@
 uptime-kuma:
 
     persistence:
-        enabled: false
+        enabled: true
         size: 5Gi
 
     ingress:
