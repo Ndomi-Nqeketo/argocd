@@ -1,0 +1,23 @@
+uptime-kuma:
+
+    persistence:
+        enabled: true
+        size: 5Gi
+
+    ingress:
+        enabled: true
+        ingressClassName: traefik
+
+        annotations:
+            cert-manager.io/cluster-issuer: selfsigned-issuer
+            kubernetes.io/ingress.class: traefik
+
+        hosts:
+            - host: kuma.lab.local
+              path: /
+              pathType: Prefix
+
+        tls:
+            - secretName: kuma-tls
+              hosts:
+                  - kuma.lab.local
