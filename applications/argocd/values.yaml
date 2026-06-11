@@ -1,18 +1,21 @@
-server:
-    insecure: true
-    extraArgs:
-        - --insecure
-    ingress:
-        enabled: true
-        hosts:
-            - argocd.lab.local
-        tlsSecretName: argocd-tls
-        annotations:
-            cert-manager.io/cluster-issuer: selfsigned-issuer
-            kubernetes.io/ingress.class: traefik
-config:
-    rbac:
-        policy.csv: |
-            g, admin, role:admin
-#    params:
-#        server.insecure: true
+argo-cd:
+
+    configs:
+        params:
+            server.insecure: true
+
+    server:
+        ingress:
+            enabled: true
+            ingressClassName: traefik
+
+            hosts:
+                - argocd.lab.local
+
+            tls:
+                - secretName: argocd-tls
+                  hosts:
+                      - argocd.lab.local
+
+            annotations:
+                cert-manager.io/cluster-issuer: selfsigned-issuer
