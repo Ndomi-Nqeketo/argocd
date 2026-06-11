@@ -1,1 +1,10 @@
-#local-path-provisioner: {}
+openebs:
+    engines:
+        local:
+            lvm:
+                enabled: false
+            zfs:
+                enabled: false
+
+    localpv-provisioner:
+        enabled: true
