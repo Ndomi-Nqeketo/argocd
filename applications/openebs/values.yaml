@@ -8,3 +8,7 @@ openebs:
 
     localpv-provisioner:
         enabled: true
+
+    replicated:
+        mayastor:
+            enabled: false
