@@ -19,3 +19,4 @@ argo-cd:
 
             annotations:
                 cert-manager.io/cluster-issuer: selfsigned-issuer
+                traefik.ingress.kubernetes.io/service.serversscheme: http
