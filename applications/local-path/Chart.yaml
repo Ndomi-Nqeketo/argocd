@@ -1,0 +1,8 @@
+apiVersion: v2
+name: local-path
+version: 0.1.0
+
+dependencies:
+    - name: local-path-provisioner
+      version: 0.0.37
+      repository: https://charts.containeroo.ch

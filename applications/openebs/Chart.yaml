@@ -1,8 +1,0 @@
-apiVersion: v2
-name: local-path
-version: 0.1.0
-
-dependencies:
-    -   name: openebs
-        version: 4.3.2
-        repository: https://openebs.github.io/openebs
