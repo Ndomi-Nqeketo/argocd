@@ -1,15 +1,16 @@
-persistence:
-  enabled: true
-  storageClass: "local-path"
-  accessMode: ReadWriteOnce
-  size: 5Gi
+uptime-kuma:
+    volume:
+        enabled: true
+        storageClassName: local-path
+        accessMode: ReadWriteOnce
+        size: 5Gi
 
-ingress:
-    enabled: true
-    className: traefik
+    ingress:
+        enabled: true
+        className: traefik
 
-    hosts:
-        - host: kuma.lab.local
-          paths:
+        hosts:
+            - host: kuma.lab.local
+              paths:
               - path: /
                 pathType: Prefix
