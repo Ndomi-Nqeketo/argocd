@@ -1,0 +1,21 @@
+kube-prometheus-stack:
+  prometheus:
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      hosts:
+        - prometheus.lab.local
+      pathType: Prefix
+
+
+
+    prometheusSpec:
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            storageClassName: local-path
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 10Gi
