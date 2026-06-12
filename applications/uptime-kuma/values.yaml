@@ -1,6 +1,6 @@
 persistence:
   enabled: true
-  storageClass: "local-path"
+  storageClass: local-path
   accessMode: ReadWriteOnce
   size: 5Gi
 
