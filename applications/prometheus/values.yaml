@@ -1,4 +1,11 @@
 kube-prometheus-stack:
+
+  grafana:
+    enabled: false
+
+  alertmanager:
+    enabled: false
+
   prometheus:
     ingress:
       enabled: true
@@ -6,8 +13,6 @@ kube-prometheus-stack:
       hosts:
         - prometheus.lab.local
       pathType: Prefix
-
-
 
     prometheusSpec:
       storageSpec:
