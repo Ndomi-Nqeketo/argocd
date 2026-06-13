@@ -2,7 +2,11 @@ kube-prometheus-stack:
 
   crds:
     enabled: true
-    upgradeJob:
+
+  upgradeJob:
+    enabled: false
+
+    prometheusOperator:
       enabled: true
 
   grafana:
