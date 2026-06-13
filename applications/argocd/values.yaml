@@ -31,3 +31,11 @@ argo-cd:
     extraEnv:
       - name: TZ
         value: Africa/Johannesburg
+
+monitors:
+  argocd:
+    name: ArgoCD
+    url: http://argocd-server.argocd:80
+    type: http
+    interval: 60
+    retries: 3

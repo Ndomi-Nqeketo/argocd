@@ -1,2 +1,7 @@
 crds:
     enabled: true
+
+extraMonitors:
+    - name: Prometheus
+      url: http://prometheus-kube-prometheus-prometheus.monitoring:9090
+      type: http
