@@ -18,6 +18,8 @@ kube-prometheus-stack:
   prometheus:
     enabled: true
     ingress:
+      annotations:
+        cert-manager.io/cluster-issuer: selfsigned-issuer
       enabled: true
       ingressClassName: traefik
       hosts:
