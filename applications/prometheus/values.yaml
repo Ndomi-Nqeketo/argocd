@@ -20,6 +20,7 @@ kube-prometheus-stack:
         cert-manager.io/cluster-issuer: selfsigned-issuer
         traefik.ingress.kubernetes.io/service.serversscheme: http
       tls: true
+      path: /
     grafana.ini:
       server:
         root_url: https://grafana.lab.local
