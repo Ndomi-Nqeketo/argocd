@@ -16,6 +16,7 @@ kube-prometheus-stack:
     enabled: false
 
   prometheus:
+    enabled: true
     ingress:
       enabled: true
       ingressClassName: traefik
