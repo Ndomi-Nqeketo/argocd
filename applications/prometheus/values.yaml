@@ -11,23 +11,25 @@ kube-prometheus-stack:
 
   grafana:
     enabled: true
-
     ingress:
+      enabled: true
       ingressClassName: traefik
       hosts:
         - grafana.lab.local
       annotations:
         cert-manager.io/cluster-issuer: selfsigned-issuer
       tls: true
-
+    grafana.ini:
+      server:
+        root_url: https://grafana.lab.local
+        serve_from_sub_path: false
     persistence:
       enabled: true
       storageClassName: local-path
       accessModes:
         - ReadWriteOnce
       size: 5Gi
-
-    adminPassword: admin
+    adminPassword: admin # Change me.
 
     sidecar:
       dashboards:
