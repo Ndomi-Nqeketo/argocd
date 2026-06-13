@@ -26,10 +26,10 @@ kube-prometheus-stack:
 
     prometheusSpec:
       securityContext:
-        runAsUser: 2000
-        runAsGroup: 2000
-        fsGroup: 2000
-        runAsNonRoot: true
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+        runAsNonRoot: false
         seccompProfile:
             type: RuntimeDefault
       storageSpec:
