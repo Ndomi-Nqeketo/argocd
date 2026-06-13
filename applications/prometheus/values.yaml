@@ -6,8 +6,8 @@ kube-prometheus-stack:
   upgradeJob:
     enabled: false
 
-    prometheusOperator:
-      enabled: true
+  prometheusOperator:
+    enabled: true
 
   grafana:
     enabled: false
